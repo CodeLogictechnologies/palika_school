@@ -48,6 +48,7 @@ dependencies:
   json_annotation: any
   tuple: ^2.0.2
   image_picker: ^0.8.9
+  upgrader: ^7.1.0
 
 dev_dependencies:
   flutter_test:

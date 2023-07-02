@@ -5,6 +5,7 @@ import 'package:palika_school/screens/school_screen.dart';
 import 'package:palika_school/screens/settings/settings_screen.dart';
 import 'package:palika_school/screens/student_attendance/student_screen.dart';
 import 'package:palika_school/screens/teacher_attendance/teacher_screen.dart';
+import 'package:upgrader/upgrader.dart';
 
 class HomeScreen extends StatefulWidget {
   static String routeName = "/home";
@@ -35,9 +36,10 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
+      body: UpgradeAlert(
+          child: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
-      ),
+      )),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
         type: BottomNavigationBarType.fixed,
